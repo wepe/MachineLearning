@@ -23,17 +23,6 @@ def classify0(inX, dataSet, labels, k):
     sortedClassCount = sorted(classCount.iteritems(), key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]
 
-
-def autoNorm(dataSet):
-    minVals = dataSet.min(0)                              
-    maxVals = dataSet.max(0)
-    ranges = maxVals - minVals
-    normDataSet = zeros(shape(dataSet))
-    m = dataSet.shape[0]
-    normDataSet = dataSet - tile(minVals, (m,1))
-    normDataSet = normDataSet/tile(ranges, (m,1))   
-    return normDataSet, ranges, minVals
-
 def img2vector(filename):
     returnVect = zeros((1,1024))
     fr = open(filename)
