@@ -50,7 +50,7 @@ def sigmoid(inX):
     return 1.0/(1+exp(-inX))
 
 #alpha:步长，maxCycles:迭代次数，可以调整
-def gradAscent(dataArray,labelArray,alpha=0.05,maxCycles=7):
+def gradAscent(dataArray,labelArray,alpha,maxCycles):
     dataMat=mat(dataArray)    #size:m*n
     labelMat=mat(labelArray)      #size:m*1
     m,n=shape(dataMat)
@@ -73,13 +73,18 @@ def classfy(testdir,weigh):
             print int(labelMat[i]),'is classfied as: 1'
             if int(labelMat[i])!=1:
                 error+=1
+                print 'error'
         else:
             print int(labelMat[i]),'is classfied as: 0'
             if int(labelMat[i])!=0:
                 error+=1
+                print 'error'
     print 'error rate is:','%.4f' %(error/m)
                 
-    
+def digitRecognition(trainDir,testDir,alpha=0.07,maxCycles=10):
+    data,label=loadData(trainDir)
+    weigh=gradAscent(data,label,alpha,maxCycles)
+    classfy(testDir,weigh)
     
         
     
