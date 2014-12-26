@@ -32,12 +32,12 @@ def pca(dataMat,percent=0.99):
     
         
     eigVals,eigVects=np.linalg.eig(np.mat(covMat))#求特征值和特征向量,特征向量是按列放的，即一列代表一个特征向量
-    n=percent2n(eigVals,percent)                 #要达到percent的方差百分比，需要前n个特征向量
-    eigValIndice=np.argsort(eigVals)            #对特征值从小到大排序
-    n_eigValIndice=eigValIndice[-1:-(n+1):-1]   #最大的n个特征值的下标
-    n_eigVect=eigVects[:,n_eigValIndice]        #最大的n个特征值对应的特征向量
-    lowDDataMat=newData*n_eigVect               #低维特征空间的数据
-    reconMat=(lowDDataMat*n_eigVect.T)+meanVal  #重构数据
+    n=percent2n(eigVals,percent)                  #要达到percent的方差百分比，需要前n个特征向量
+    eigValIndice=np.argsort(eigVals)              #对特征值从小到大排序
+    n_eigValIndice=eigValIndice[-1:-(n+1):-1]     #最大的n个特征值的下标
+    n_eigVect=eigVects[:,n_eigValIndice]          #最大的n个特征值对应的特征向量
+    lowDDataMat=newData*n_eigVect                 #低维特征空间的数据
+    reconMat=(lowDDataMat*n_eigVect.T)+meanVal    #重构数据
     return lowDDataMat,reconMat
     
     
