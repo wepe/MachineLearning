@@ -10,3 +10,39 @@ This project contain some machine learning algrithm demo.Maybe the code is also 
 CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
 个人网站：[Wepon's blog](http://2hwp.com)
+
+
+##目录介绍
+
+- **DeepLearning Tutorials**
+
+      这个文件夹下包含一些深度学习算法的实现代码，以及具体的应用实例，包含如下算法：
+
+      [*FaceRecognition_CNN(olivettifaces)*](https://github.com/wepe/MachineLearning-Demo/tree/master/DeepLearning%20Tutorials/FaceRecognition_CNN(olivettifaces))
+      将卷积神经网络CNN应用于人脸识别的一个demo，人脸数据库采用olivettifaces，CNN模型参考LeNet5，基于python+theano+numpy+PIL实现。详细介绍这个demo的文章：[文章链接](http://blog.csdn.net/u012162613/article/details/43277187)
+
+
+      [cnn_LeNet](https://github.com/wepe/MachineLearning-Demo/tree/master/DeepLearning%20Tutorials/cnn_LeNet)  CNN卷积神经网络算法的实现，模型为简化版的LeNet，应用于MNIST数据集（手写数字），来自于DeepLearning.net上的一个教程，基于python+theano，我用了中文将原始的代码进行详细的解读，并简单总结了CNN算法，相应的文章发在：[文章链接](http://blog.csdn.net/u012162613/article/details/43225445)
+
+      [mlp](https://github.com/wepe/MachineLearning-Demo/tree/master/DeepLearning%20Tutorials/mlp)  多层感知机算法的实现，代码实现了最简单的三层感知机，并应用于MNIST数据集，来自DeepLearning.net上的一个教程，基于python+theano，我写了一篇文章总结介绍了MLP算法，同时用中文详细解读了原始的代码：[文章链接](http://blog.csdn.net/u012162613/article/details/43221829)
+
+      [Softmax_sgd(or logistic_sgd)](https://github.com/wepe/MachineLearning-Demo/tree/master/DeepLearning%20Tutorials/Softmax_sgd(or%20logistic_sgd)) Softmax回归算法的实现，应用于MNIST数据集，基于Python+theano，来自DeepLearning.net上的一个教程，基于python+theano，我写了一篇文章介绍了Softmax回归算法，同时用中文详细解读了原始的代码：[文章链接](http://blog.csdn.net/u012162613/article/details/43157801)
+
+- **PCA**
+
+      基于python+numpy实现了主成份分析PCA算法，这里详细地介绍了PCA算法，以及代码开发流程：[文章链接](http://blog.csdn.net/u012162613/article/details/42177327)
+
+- **kNN**
+      
+      基于python+numpy实现了K近邻算法，并将其应用在MNIST数据集上，详细的介绍：[文章链接](http://blog.csdn.net/u012162613/article/details/41768407)
+
+- **logistic regression**
+
+      基于python+numpy实现了logistic回归（二类别），详细的介绍：[文章链接](http://blog.csdn.net/u012162613/article/details/41844495)
+     
+    
+
+##Contributing
+
+欢迎加入本项目，任何机器学习的demo都可以push进来，并且最好有相应的博文介绍代码。
+ 
