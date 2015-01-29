@@ -183,3 +183,25 @@ def use_CNN(dataset='olivettifaces.gif',params_file='params.pkl',nkerns=[5, 10])
 
 if __name__ == '__main__':
 	use_CNN()
+
+
+
+"""一点笔记,对theano.function的理解，不一定正确，后面深入理解了再回头看看
+
+在theano里面，必须通过function定义输入x和输出，然后调用function，才会开始计算，比如在use_CNN里面，在定义layer0时，即使将faces作为输入，将layer1～layer3定义好后，也无法直接用layer3.y_pred来获得所属类别。
+因为在theano中，layer0～layer3只是一种“图”关系，我们定义了layer0～layer3，也只是创建了这种图关系，但是如果没有funtion，它是不会计算的。
+
+这也是为什么要定义x的原因：
+    x = T.matrix('x')
+
+然后将变量x作为layer0的输入。
+最后，定义一个function：
+f = theano.function(
+        [x],    #funtion 的输入必须是list，即使只有一个输入
+        layer3.y_pred
+    )
+
+将x作为输入，layer3.y_pred作为输出。
+当调用f(faces)时，就获得了预测值
+
+"""
