@@ -1,6 +1,6 @@
 # -*-coding:utf8-*-#
 """
-本程序基于python+numpy+theano+PIL，采用类似LeNet5的CNN模型，应用于olivettifaces人脸数据库，
+本程序基于python+numpy+theano+PIL开发，采用类似LeNet5的CNN模型，应用于olivettifaces人脸数据库，
 实现人脸识别的功能，模型的误差降到了5%以下。
 本程序只是个人学习过程的一个toy implement，模型可能存在overfitting，因为样本小，这一点也无从验证。
 
@@ -23,7 +23,7 @@ from theano.tensor.signal import downsample
 from theano.tensor.nnet import conv
 
 """
-加载图像数据的函数,dataset_path即图像的路径
+加载图像数据的函数,dataset_path即图像olivettifaces的路径
 加载olivettifaces后，划分为train_data,valid_data,test_data三个数据集
 函数返回train_data,valid_data,test_data以及对应的label
 """
@@ -214,7 +214,7 @@ def save_params(param1,param2,param3,param4):
 上面定义好了CNN的一些基本构件，下面的函数将CNN应用于olivettifaces这个数据集，CNN的模型基于LeNet
 可以设置的参数有：
 batch_size,但应注意n_train_batches、n_valid_batches、n_test_batches的计算都依赖于batch_size
-nkerns=[20, 50]即第一二层的卷积核个数可以设置
+nkerns=[5, 10]即第一二层的卷积核个数可以设置
 全连接层HiddenLayer的输出神经元个数n_out可以设置，要同时更改分类器的输入n_in
 另外，还有一个很重要的就是学习速率learning_rate
 """
@@ -239,7 +239,7 @@ def evaluate_olivettifaces(learning_rate=0.05, n_epochs=200,
     n_valid_batches /= batch_size
     n_test_batches /= batch_size
 
-
+    #定义几个变量，x代表人脸数据，作为layer0的输入
     index = T.lscalar()
     x = T.matrix('x')  
     y = T.ivector('y')
