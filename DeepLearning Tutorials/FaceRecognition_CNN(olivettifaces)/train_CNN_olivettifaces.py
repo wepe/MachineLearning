@@ -211,12 +211,13 @@ def save_params(param1,param2,param3,param4):
 
 
 """
-上面定义好了CNN的一些基本构件，下面的函数将CNN应用于olivettifaces这个数据集，CNN的模型基于LeNet
+上面定义好了CNN的一些基本构件，下面的函数将CNN应用于olivettifaces这个数据集，CNN的模型基于LeNet。
+采用的优化算法是批量随机梯度下降算法，minibatch SGD，所以下面很多参数都带有batch_size，比如image_shape=(batch_size, 1, 57, 47)
 可以设置的参数有：
 batch_size,但应注意n_train_batches、n_valid_batches、n_test_batches的计算都依赖于batch_size
 nkerns=[5, 10]即第一二层的卷积核个数可以设置
 全连接层HiddenLayer的输出神经元个数n_out可以设置，要同时更改分类器的输入n_in
-另外，还有一个很重要的就是学习速率learning_rate
+另外，还有一个很重要的就是学习速率learning_rate.
 """
 
 def evaluate_olivettifaces(learning_rate=0.05, n_epochs=200,
@@ -247,7 +248,8 @@ def evaluate_olivettifaces(learning_rate=0.05, n_epochs=200,
 
 
     ######################
-    #建立CNN模型:input+layer0(LeNetConvPoolLayer)+layer1(LeNetConvPoolLayer)+layer2(HiddenLayer)+layer3(LogisticRegression)
+    #建立CNN模型:
+    #input+layer0(LeNetConvPoolLayer)+layer1(LeNetConvPoolLayer)+layer2(HiddenLayer)+layer3(LogisticRegression)
     ######################
     print '... building the model'
 
@@ -292,9 +294,13 @@ def evaluate_olivettifaces(learning_rate=0.05, n_epochs=200,
         activation=T.tanh
     )
 
-    #分类
+    #分类器
     layer3 = LogisticRegression(input=layer2.output, n_in=2000, n_out=40)   #n_in等于全连接层的输出，n_out等于40个类别
 
+
+    ###############
+    # 定义优化算法的一些基本要素：代价函数，训练、验证、测试model、参数更新规则（即梯度下降）
+    ###############
     # 代价函数
     cost = layer3.negative_log_likelihood(y)
     
@@ -325,7 +331,7 @@ def evaluate_olivettifaces(learning_rate=0.05, n_epochs=200,
         (param_i, param_i - learning_rate * grad_i)
         for param_i, grad_i in zip(params, grads)
     ]
-
+    #train_model在训练过程中根据MSGD优化更新参数
     train_model = theano.function(
         [index],
         cost,
@@ -338,7 +344,7 @@ def evaluate_olivettifaces(learning_rate=0.05, n_epochs=200,
 
 
     ###############
-    # 开始训练CNN，寻找最优的参数
+    # 训练CNN阶段，寻找最优的参数。
     ###############
     print '... training'
     #在LeNet5中，batch_size=500,n_train_batches=50000/500=100，patience=10000
