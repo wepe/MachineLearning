@@ -44,5 +44,5 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
 ##Contributing
 
-欢迎加入本项目，任何机器学习的demo都可以push进来，并且最好有相应的博文介绍代码。
+欢迎加入本项目，任何机器学习/深度学习的demo都可以push进来，并且最好有相应的博文介绍代码。
  
