@@ -5,6 +5,7 @@
 这样就得到一个可以使用的CNN系统，将人脸图输入这个CNN系统，预测人脸图的类别。
 
 @author:wepon(http://2hwp.com)
+讲解这份代码的文章：http://blog.csdn.net/u012162613/article/details/43277187
 """
 
 import os
