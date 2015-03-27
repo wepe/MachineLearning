@@ -47,7 +47,7 @@ class HiddenLayer(object):
          另外，W的初始化有个规则：如果使用tanh函数，则在-sqrt(6./(n_in+n_hidden))到sqrt(6./(n_in+n_hidden))之间均匀
          抽取数值来初始化W，若时sigmoid函数，则以上再乘4倍。
          """
-         #如果W未初始化，则根据上述方法初始化。
+         #如果W没有给定，即等于None，则根据上述的规则随机初始化。
          #加入这个判断的原因是：有时候我们可以用训练好的参数来初始化W，见我的上一篇文章。
          if W is None:
             W_values = numpy.asarray(
@@ -127,6 +127,19 @@ class LogisticRegression(object):
 #params，LogisticRegression的参数     
         self.params = [self.W, self.b]
 
+    def negative_log_likelihood(self, y):
+        return -T.mean(T.log(self.p_y_given_x)[T.arange(y.shape[0]), y])
+
+    def errors(self, y):
+        if y.ndim != self.y_pred.ndim:
+            raise TypeError(
+                'y should have the same shape as self.y_pred',
+                ('y', y.type, 'y_pred', self.y_pred.type)
+            )
+        if y.dtype.startswith('int'):
+            return T.mean(T.neq(self.y_pred, y))
+        else:
+            raise NotImplementedError()
 
 
 #3层的MLP
