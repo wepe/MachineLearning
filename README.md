@@ -1,4 +1,4 @@
-MachineLearning-Demo
+MachineLearning
 ====================
 
 This project contain some machine learning algrithm demo.Maybe the code is also useful to you.
@@ -18,7 +18,7 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
       这个文件夹下包含一些深度学习算法的实现代码，以及具体的应用实例，包含如下算法：
 
-      [*FaceRecognition_CNN(olivettifaces)*](https://github.com/wepe/MachineLearning-Demo/tree/master/DeepLearning%20Tutorials/FaceRecognition_CNN(olivettifaces))
+      [FaceRecognition_CNN(olivettifaces)](https://github.com/wepe/MachineLearning-Demo/tree/master/DeepLearning%20Tutorials/FaceRecognition_CNN(olivettifaces))
       将卷积神经网络CNN应用于人脸识别的一个demo，人脸数据库采用olivettifaces，CNN模型参考LeNet5，基于python+theano+numpy+PIL实现。详细介绍这个demo的文章：[文章链接](http://blog.csdn.net/u012162613/article/details/43277187)
 
 
@@ -40,7 +40,8 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
       基于python+numpy实现了logistic回归（二类别），详细的介绍：[文章链接](http://blog.csdn.net/u012162613/article/details/41844495)
      
-    
+- **SVM**    
+
 
 ##Contributing
 
