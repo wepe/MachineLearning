@@ -42,6 +42,7 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
      
 - **SVM**    
 
+	[libsvm liblinear-usage](https://github.com/wepe/MachineLearning/tree/master/SVM/libsvm%20liblinear-usage) 对使用广泛的libsvm、liblinear的使用方法进行了总结，详细介绍：[文章链接](http://blog.csdn.net/u012162613/article/details/45206813)
 
 ##Contributing
 
