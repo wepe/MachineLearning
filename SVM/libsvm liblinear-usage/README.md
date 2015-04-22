@@ -1,4 +1,4 @@
-##libsvm和liblinear的使用总结
+#libsvm和liblinear的使用总结
 
 0.安装方法
 ---
@@ -15,7 +15,7 @@ unix系统下的安装方法：到[官网](http://www.csie.ntu.edu.tw/~cjlin/lib
 
 		python gen_datafile.py 
 
-	>注：gen_datafile.py是我自己写的一个python脚本，放在我的[github]()
+	>注：gen_datafile.py是我自己写的一个python脚本，放在我的[github](https://github.com/wepe/MachineLearning/tree/master/SVM/libsvm%20liblinear-usage)
 
 2. 生成可执行文件 a.out，在终端下键入：
 
