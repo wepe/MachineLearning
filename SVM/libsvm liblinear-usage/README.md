@@ -17,10 +17,11 @@ unix系统下的安装方法：到[官网](http://www.csie.ntu.edu.tw/~cjlin/lib
 
 	>注：gen_datafile.py是我自己写的一个python脚本，放在我的[github](https://github.com/wepe/MachineLearning/tree/master/SVM/libsvm%20liblinear-usage)
 
-2. 生成可执行文件 a.out，在终端下键入：
+2. 编译convert.c生成可执行文件 a.out，在终端下键入：
 
 		gcc convert.c
 
+	>注：convert.c放在我的[github](https://github.com/wepe/MachineLearning/tree/master/SVM/libsvm%20liblinear-usage)
 
 3. 用上面得到的csv文件和a.out文件生成libsvm格式的文件, 在终端下键入:
 
