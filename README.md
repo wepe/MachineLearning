@@ -16,7 +16,9 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
 - **DeepLearning Tutorials**
 
-      这个文件夹下包含一些深度学习算法的实现代码，以及具体的应用实例，包含如下算法：
+      这个文件夹下包含一些深度学习算法的实现代码，以及具体的应用实例，包含：
+      
+      [keras_usage](https://github.com/wepe/MachineLearning/tree/master/DeepLearning%20Tutorials/keras_usage) 介绍了一个简单易用的深度学习框架keras，用经典的Mnist分类问题对该框架的使用进行说明，训练一个CNN，总共不超过30行代码。
 
       [FaceRecognition_CNN(olivettifaces)](https://github.com/wepe/MachineLearning-Demo/tree/master/DeepLearning%20Tutorials/FaceRecognition_CNN(olivettifaces))
       将卷积神经网络CNN应用于人脸识别的一个demo，人脸数据库采用olivettifaces，CNN模型参考LeNet5，基于python+theano+numpy+PIL实现。详细介绍这个demo的文章：[文章链接](http://blog.csdn.net/u012162613/article/details/43277187)
