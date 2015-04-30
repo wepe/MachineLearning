@@ -6,7 +6,7 @@
 1. Keras简介
 ---
 
-Keras是基于Theano的一个深度学习框架，它的设计参考了Torch，用Python语言编写，是一个高度模块化的神经网络库，支持GPU和CPU。使用文档在这：http://keras.io/，这个框架貌似是刚刚火起来的，使用上的问题可以到github提issue:https://github.com/fchollet/keras　
+Keras是基于Theano的一个深度学习框架，它的设计参考了Torch，用Python语言编写，是一个高度模块化的神经网络库，支持GPU和CPU。使用文档在这： [http://keras.io/](http://keras.io),这个框架貌似是刚刚火起来的，使用上的问题可以到github提issue:[https://github.com/fchollet/keras](https://github.com/fchollet/keras)　
 
 下面简单介绍一下怎么使用Keras，以Mnist数据库为例,编写一个CNN网络结构，你将会发现特别简单。
 
