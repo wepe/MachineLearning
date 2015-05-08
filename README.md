@@ -3,7 +3,7 @@ MachineLearning
 
 This project contain some machine learning algrithm demo.Maybe the code is also useful to you.
 
-这个仓库包含一些常用的机器学习算法的实现代码，代码中也有会一些具体的小应用，比如将CNN应用于人脸识别。
+这个仓库包含一些常用的机器学习算法的实现代码，代码中也有会一些具体的小应用。
 
 此外，每个算法我都会写一篇文章来地介绍它们，同时详细地解读代码。文章发表在我的CSDN专栏以及个人网站上：
 
@@ -18,7 +18,7 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
       这个文件夹下包含一些深度学习算法的实现代码，以及具体的应用实例，包含：
 
-	  [dive_into _keras]() Keras使用进阶。介绍了怎么保存训练好的CNN模型，怎么将CNN用作特征提取，怎么可视化卷积图。[文章链接](http://blog.csdn.net/u012162613/article/details/45581421)
+	  [dive_into _keras](https://github.com/wepe/MachineLearning/tree/master/DeepLearning%20Tutorials/dive_into_keras) Keras使用进阶。介绍了怎么保存训练好的CNN模型，怎么将CNN用作特征提取，怎么可视化卷积图。[文章链接](http://blog.csdn.net/u012162613/article/details/45581421)
       
       [keras_usage](https://github.com/wepe/MachineLearning/tree/master/DeepLearning%20Tutorials/keras_usage) 介绍了一个简单易用的深度学习框架keras，用经典的Mnist分类问题对该框架的使用进行说明，训练一个CNN，总共不超过30行代码。[文章链接](http://blog.csdn.net/u012162613/article/details/45397033)
 
