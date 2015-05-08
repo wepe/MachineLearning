@@ -2,9 +2,9 @@
 
 '''
     GPU run command:
-        THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python cifar10_cnn.py
+        THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python cnn.py
     CPU run command:
-        python cifar10_cnn.py
+        python cnn.py
 '''
 #导入各种用到的模块组件
 from __future__ import absolute_import

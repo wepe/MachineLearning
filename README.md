@@ -17,6 +17,8 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 - **DeepLearning Tutorials**
 
       这个文件夹下包含一些深度学习算法的实现代码，以及具体的应用实例，包含：
+
+	  [dive_into _keras]() Keras使用进阶。介绍了怎么保存训练好的CNN模型，怎么将CNN用作特征提取，怎么可视化卷积图。[文章链接](http://blog.csdn.net/u012162613/article/details/45581421)
       
       [keras_usage](https://github.com/wepe/MachineLearning/tree/master/DeepLearning%20Tutorials/keras_usage) 介绍了一个简单易用的深度学习框架keras，用经典的Mnist分类问题对该框架的使用进行说明，训练一个CNN，总共不超过30行代码。[文章链接](http://blog.csdn.net/u012162613/article/details/45397033)
 
