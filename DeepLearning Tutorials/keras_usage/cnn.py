@@ -85,8 +85,6 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd,class_mode="categor
 #validation_split=0.2，将20%的数据作为验证集。
 model.fit(data, label, batch_size=100, nb_epoch=10,shuffle=True,verbose=1,show_accuracy=True,validation_split=0.2)
 
-#fit方法在达到设定的nb_epoch时结束，并且自动地保存了效果最好的model,之后你可以调用model.evaluate()方法对测试数据进行测试，
-#还有model.predict_classes,model.predict_proba等方法,具体请看文档。
 
 """
 #使用data augmentation的方法
