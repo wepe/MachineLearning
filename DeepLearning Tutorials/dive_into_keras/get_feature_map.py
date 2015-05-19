@@ -16,10 +16,10 @@ import matplotlib.cm as cm
 model = cPickle.load(open("model.pkl","rb"))
 
 #define theano funtion to get output of  FC layer
-get_feature = theano.function([model.layers[0].input],model.layers[11].output(train=False),allow_input_downcast=False) 
+get_feature = theano.function([model.layers[0].input],model.layers[11].get_output(train=False),allow_input_downcast=False) 
 
 #define theano funtion to get output of  first Conv layer 
-get_featuremap = theano.function([model.layers[0].input],model.layers[2].output(train=False),allow_input_downcast=False) 
+get_featuremap = theano.function([model.layers[0].input],model.layers[2].get_output(train=False),allow_input_downcast=False) 
 
 
 data, label = load_data()

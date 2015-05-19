@@ -44,7 +44,7 @@ if __name__ == "__main__":
     accuracy = len([1 for i in range(num) if testlabel[i]==pred_testlabel[i]])/float(num)
     print(" Origin_model Accuracy:",accuracy)
     #define theano funtion to get output of FC layer
-    get_feature = theano.function([origin_model.layers[0].input],origin_model.layers[11].output(train=False),allow_input_downcast=False)
+    get_feature = theano.function([origin_model.layers[0].input],origin_model.layers[11].get_output(train=False),allow_input_downcast=False)
     feature = get_feature(data)
     #train svm using FC-layer feature
     svc(feature[0:30000],label[0:30000],feature[30000:],label[30000:])
