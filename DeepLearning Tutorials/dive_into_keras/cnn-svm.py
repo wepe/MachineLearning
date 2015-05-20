@@ -10,6 +10,7 @@ import theano
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from data import load_data
+import random
 
 
 def svc(traindata,trainlabel,testdata,testlabel):
@@ -33,8 +34,14 @@ def rf(traindata,trainlabel,testdata,testlabel):
     print("cnn-rf Accuracy:",accuracy)
 
 if __name__ == "__main__":
-    #load data,split into traindata and testdata
+    #load data
     data, label = load_data()
+    #shuffle the data
+    index = [i for i in range(len(data))]
+    random.shuffle(index)
+    data = data[index]
+    label = label[index]
+    
     (traindata,testdata) = (data[0:30000],data[30000:])
     (trainlabel,testlabel) = (label[0:30000],label[30000:])
     #use origin_model to predict testdata
