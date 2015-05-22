@@ -43,6 +43,10 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 - **logistic regression**
 
       基于python+numpy实现了logistic回归（二类别），详细的介绍：[文章链接](http://blog.csdn.net/u012162613/article/details/41844495)
+
+- **ManifoldLearning**
+
+	[DimensionalityReduction_DataVisualizing]() 运用多种流形学习方法将高维数据降维，并用matplotlib将数据可视化(2维和3维)
      
 - **SVM**    
 
