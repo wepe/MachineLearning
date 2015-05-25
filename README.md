@@ -46,7 +46,7 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
 - **ManifoldLearning**
 
-	[DimensionalityReduction_DataVisualizing]() 运用多种流形学习方法将高维数据降维，并用matplotlib将数据可视化(2维和3维)
+	[DimensionalityReduction_DataVisualizing](https://github.com/wepe/MachineLearning/tree/master/ManifoldLearning/DimensionalityReduction_DataVisualizing) 运用多种流形学习方法将高维数据降维，并用matplotlib将数据可视化(2维和3维)
      
 - **SVM**    
 
