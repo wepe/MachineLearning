@@ -18,12 +18,18 @@ from keras.optimizers import SGD, Adadelta, Adagrad
 from keras.utils import np_utils, generic_utils
 from six.moves import range
 from data import load_data
+import random
 
 
 
 
 #加载数据
 data, label = load_data()
+#打乱数据
+index = [i for i in range(len(data))]
+random.shuffle(index)
+data = data[index]
+label = label[index]
 print(data.shape[0], ' samples')
 
 #label为0~9共10个类别，keras要求格式为binary class matrices,转化一下，直接调用keras提供的这个函数
