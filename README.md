@@ -56,6 +56,10 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
 	GMM和k-means作为EM算法的应用，在某种程度有些相似之处，不过GMM明显学习出一些概率密度函数来，结合相关理解写成python版本，详细介绍：[文章链接](http://blog.csdn.net/gugugujiawei/article/details/45583051)
 
+- **DecisionTree**
+
+	Python、Numpy、Matplotlib实现的ID3、C4.5，其中C4.5有待完善，后续加入CART。文章待总结
+
 ##Contributing
 
 欢迎加入本项目，任何机器学习/深度学习的demo都可以push进来，并且最好有相应的博文介绍代码。
