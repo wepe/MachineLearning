@@ -58,7 +58,7 @@ MachineLearning
 
 - **KMeans**
 
-	介绍了聚类分析中最常用的KMeans算法（及二分KMeans算法），基于NumPy的算法实现，以及基于Matplotlib的聚类过程可视化。[文章链接]()
+	介绍了聚类分析中最常用的KMeans算法（及二分KMeans算法），基于NumPy的算法实现，以及基于Matplotlib的聚类过程可视化。[文章链接](http://blog.csdn.net/u012162613/article/details/47811235)
 
 ##Contributor
 
