@@ -1,15 +1,11 @@
 MachineLearning
 ====================
 
-This project contain some machine learning algrithm demo.Maybe the code is also useful to you.
+
 
 这个仓库包含一些常用的机器学习算法的实现代码，代码中也有会一些具体的小应用。
 
-此外，每个算法我都会写一篇文章来地介绍它们，同时详细地解读代码。文章发表在我的CSDN专栏以及个人网站上：
-
-CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
-
-个人网站：[Wepon's blog](http://2hwp.com)
+此外，每个算法我都会写一篇文章来地介绍它们，同时详细地解读代码。文章发表在我的CSDN专栏以及个人网站上。欢迎所有的机器学习爱好者参与进来，并请保证文章和代码高质量。
 
 
 ##目录介绍
@@ -58,9 +54,17 @@ CSDN：[wepon的专栏](http://blog.csdn.net/u012162613)
 
 - **DecisionTree**
 
-	Python、Numpy、Matplotlib实现的ID3、C4.5，其中C4.5有待完善，后续加入CART。文章待总结
+	Python、Numpy、Matplotlib实现的ID3、C4.5，其中C4.5有待完善，后续加入CART。文章待总结。[代码](https://github.com/wepe/MachineLearning/tree/master/DecisionTree)
 
-##Contributing
+- **KMeans**
 
-欢迎加入本项目，任何机器学习/深度学习的demo都可以push进来，并且最好有相应的博文介绍代码。
+	介绍了聚类分析中最常用的KMeans算法（及二分KMeans算法），基于NumPy的算法实现，以及基于Matplotlib的聚类过程可视化。[文章链接]()
+
+##Contributor
+
+- [wepon](https://github.com/wepe)
+- [Gogary](https://github.com/enjoyhot)
+
+
+欢迎加入本项目，任何机器学习/深度学习的demo都可以push进来，辅以详细的博文介绍。
  
