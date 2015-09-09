@@ -60,6 +60,10 @@ MachineLearning
 
 	介绍了聚类分析中最常用的KMeans算法（及二分KMeans算法），基于NumPy的算法实现，以及基于Matplotlib的聚类过程可视化。[文章链接](http://blog.csdn.net/u012162613/article/details/47811235)
 
+- **NaiveBayes**
+
+	朴素贝叶斯算法的理论推导，以及三种常见模型（多项式模型，高斯模型，伯努利模型）的介绍与编程实现（基于Python，Numpy）。
+
 ##Contributor
 
 - [wepon](https://github.com/wepe)
