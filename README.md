@@ -38,7 +38,7 @@ MachineLearning
 
 - **logistic regression**
 
-	  - 基于C++以及线性代数库Eigen实现的logistic回归，[代码]()
+	  - 基于C++以及线性代数库Eigen实现的logistic回归，[代码](https://github.com/wepe/MachineLearning/tree/master/logistic%20regression/use_cpp_and_eigen)
 
       - 基于python+numpy实现了logistic回归（二类别），详细的介绍：[文章链接](http://blog.csdn.net/u012162613/article/details/41844495)
 
