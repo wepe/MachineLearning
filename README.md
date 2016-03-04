@@ -68,7 +68,4 @@ MachineLearning
 
 - [wepon](https://github.com/wepe)
 - [Gogary](https://github.com/enjoyhot)
-
-
-欢迎加入本项目，任何机器学习/深度学习的demo都可以push进来，辅以详细的博文介绍。
  
