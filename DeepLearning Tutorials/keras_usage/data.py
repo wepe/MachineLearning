@@ -23,8 +23,9 @@ def load_data():
 		arr = np.asarray(img,dtype="float32")
 		data[i,:,:,:] = arr
 		label[i] = int(imgs[i].split('.')[0])
+        data /= np.max(data)
+        data -= np.mean(data)
 	return data,label
-
 
 
 
