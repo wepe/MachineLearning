@@ -9,6 +9,7 @@ import cPickle
 import theano
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
+from sklearn.preprocessing import MinMaxScaler
 from data import load_data
 import random
 
@@ -46,12 +47,15 @@ if __name__ == "__main__":
     (trainlabel,testlabel) = (label[0:30000],label[30000:])
     #use origin_model to predict testdata
     origin_model = cPickle.load(open("model.pkl","rb"))
+    #print(origin_model.layers)
     pred_testlabel = origin_model.predict_classes(testdata,batch_size=1, verbose=1)
     num = len(testlabel)
     accuracy = len([1 for i in range(num) if testlabel[i]==pred_testlabel[i]])/float(num)
     print(" Origin_model Accuracy:",accuracy)
     #define theano funtion to get output of FC layer
-    get_feature = theano.function([origin_model.layers[0].input],origin_model.layers[11].get_output(train=False),allow_input_downcast=False)
+    get_feature = theano.function([origin_model.layers[0].input],origin_model.layers[9].output,allow_input_downcast=False)
     feature = get_feature(data)
     #train svm using FC-layer feature
+    scaler = MinMaxScaler()
+    feature = scaler.fit_transform(feature)
     svc(feature[0:30000],label[0:30000],feature[30000:],label[30000:])
