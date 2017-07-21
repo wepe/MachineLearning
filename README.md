@@ -64,6 +64,10 @@ MachineLearning
 
 	朴素贝叶斯算法的理论推导，以及三种常见模型（多项式模型，高斯模型，伯努利模型）的介绍与编程实现（基于Python，Numpy）。[文章链接](http://blog.csdn.net/u012162613/article/details/48323777)
 
+- **Ridge and Kernel Ridge**
+
+    介绍了Ridge回归和它的Kernel版本。[代码](./Ridge/kernel_ridge/kernel_ridge.py)
+
 ## Contributor
 
 - [wepon](https://github.com/wepe)
