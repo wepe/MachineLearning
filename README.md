@@ -48,6 +48,11 @@ MachineLearning
 
 	[libsvm liblinear-usage](https://github.com/wepe/MachineLearning/tree/master/SVM/libsvm%20liblinear-usage) 对使用广泛的libsvm、liblinear的使用方法进行了总结，详细介绍：[文章链接](http://blog.csdn.net/u012162613/article/details/45206813)
 
+    [SVM by SMO](./SVM/SVM_by_SMO) - 用SMO实现了SVM
+
+    [SVM by QP](./SVM/SVM_by_QP) - 用二次编程（QP）实现了SVM
+
+
 - **GMM**
 
 	GMM和k-means作为EM算法的应用，在某种程度有些相似之处，不过GMM明显学习出一些概率密度函数来，结合相关理解写成python版本，详细介绍：[文章链接](http://blog.csdn.net/gugugujiawei/article/details/45583051)
@@ -72,4 +77,4 @@ MachineLearning
 
 - [wepon](https://github.com/wepe)
 - [Gogary](https://github.com/enjoyhot)
- 
+- [Locky](https://github.com/junlulocky)
