@@ -18,5 +18,20 @@
 ## PyCharm
 *.idea/*.iml
 
-# auxiliary python files
-*.pyc
+## auxiliary python files
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## configurations
+db.ini
+deploy_key_rsa
+
