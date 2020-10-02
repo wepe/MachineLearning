@@ -8,7 +8,7 @@ MachineLearning
 
 ## 目录介绍
 
-- **DeepLearning Tutorials**
+- **DeepLearning Tutorials***
 
    这个文件夹下包含一些深度学习算法的实现代码，以及具体的应用实例，包含：
 
