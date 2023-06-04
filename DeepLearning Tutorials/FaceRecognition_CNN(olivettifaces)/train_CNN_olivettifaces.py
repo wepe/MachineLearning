@@ -17,6 +17,7 @@ import time
 import numpy
 from PIL import Image
 
+
 import theano
 import theano.tensor as T
 from theano.tensor.signal import downsample
@@ -57,23 +58,17 @@ def load_data(dataset_path):
 	test_label[i]=label[i*10+9]
 
     #将数据集定义成shared类型，才能将数据复制进GPU，利用GPU加速程序。
-    def shared_dataset(data_x, data_y, borrow=True):
-        shared_x = theano.shared(numpy.asarray(data_x,
-                                               dtype=theano.config.floatX),
-                                 borrow=borrow)
-        shared_y = theano.shared(numpy.asarray(data_y,
-                                               dtype=theano.config.floatX),
-                                 borrow=borrow)
-        return shared_x, T.cast(shared_y, 'int32')
+   def shared_dataset(data_x, data_y, borrow=True):
+    shared_x = theano.shared(np.asarray(data_x, dtype=np.float32), borrow=borrow)
+    shared_y = theano.shared(np.asarray(data_y, dtype=np.int32), borrow=borrow)
+    return shared_x, shared_y
 
+train_set_x, train_set_y = shared_dataset(train_data, train_label)
+valid_set_x, valid_set_y = shared_dataset(valid_data, valid_label)
+test_set_x, test_set_y = shared_dataset(test_data, test_label)
 
-
-    train_set_x, train_set_y = shared_dataset(train_data,train_label)
-    valid_set_x, valid_set_y = shared_dataset(valid_data,valid_label)
-    test_set_x, test_set_y = shared_dataset(test_data,test_label)
-    rval = [(train_set_x, train_set_y), (valid_set_x, valid_set_y),
-            (test_set_x, test_set_y)]
-    return rval
+rval = [(train_set_x, train_set_y), (valid_set_x, valid_set_y), (test_set_x, test_set_y)]
+return rval
 
 
 
