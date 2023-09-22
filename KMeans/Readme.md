@@ -15,8 +15,9 @@
 import cPickle
 from kmeans import KMeans,biKMeans
 X,y = cPickle.load(open('data.pkl','r'))
-clf = KMeans(n_clusters=10,initCent='random',max_iter=200)
-#clf = KMeans(n_clusters=10,initCent=X[0:10],max_iter=200)
+#max_iter=100 will remove the warnings no need to write max_iter=100
+clf = KMeans(n_clusters=10,initCent='random',max_iter=100)
+#clf = KMeans(n_clusters=10,initCent=X[0:10],max_iter=100)
 #clf = biKMeans(n_clusters=10)
 clf.fit(X)
 clf.predict(X)
