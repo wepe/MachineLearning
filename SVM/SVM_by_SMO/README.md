@@ -1,7 +1,7 @@
 # SVM
 
 Simple implementation of a Support Vector Classification using the Sequential Minimal Optimization (SMO) algorithm for 
-training.
+training. 
 
 ## Supported python versions:
 * Python 2.7
@@ -13,6 +13,7 @@ training.
 # Documentation
 
 Setup model (following parameters are default)
+Library Used - SVCSMO
 
 ```python
 
